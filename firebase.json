@@ -1,0 +1,11 @@
+{
+    "hosting": {
+        "public": "manual_deploy",
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ]
+    }
+}

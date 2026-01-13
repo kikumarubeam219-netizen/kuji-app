@@ -355,9 +355,7 @@ export const deleteLottery = async (lotteryId, userId) => {
         if (lottery.creatorId !== userId) {
             throw new Error('削除権限がありません');
         }
-        if (lottery.status !== 'completed') {
-            throw new Error('終了していないくじは削除できません');
-        }
+        // 削除チェック削除: 途中でも削除可能にする
         demoLotteries.splice(index, 1);
         return true;
     }
@@ -376,9 +374,7 @@ export const deleteLottery = async (lotteryId, userId) => {
             throw new Error('削除権限がありません');
         }
 
-        if (lottery.status !== 'completed') {
-            throw new Error('終了していないくじは削除できません');
-        }
+        // 削除チェック削除: 途中でも削除可能にする
 
         // drawsサブコレクションを削除
         const drawsSnapshot = await getDocs(

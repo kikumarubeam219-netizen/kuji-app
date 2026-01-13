@@ -156,14 +156,12 @@ const Home = () => {
                                                     <span>残り: {lottery.remainingTotal}/{lottery.totalCount}枚</span>
                                                     <span>あたり: {lottery.remainingWinners}枚</span>
                                                 </div>
-                                                {lottery.status === 'completed' && (
-                                                    <button
-                                                        className="delete-button"
-                                                        onClick={(e) => handleDelete(lottery.id, e)}
-                                                    >
-                                                        🗑️ 削除
-                                                    </button>
-                                                )}
+                                                <button
+                                                    className="delete-button"
+                                                    onClick={(e) => handleDelete(lottery.id, e)}
+                                                >
+                                                    🗑️ 削除
+                                                </button>
                                             </div>
                                         ))}
                                     </div>
