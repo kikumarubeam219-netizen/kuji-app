@@ -276,3 +276,49 @@
         gap: 12px;
     }
 }
+
+/* ログイン必須画面 */
+.draw-area-login-required {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.login-prompt {
+    margin-top: 40px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    max-width: 400px;
+}
+
+.login-icon {
+    font-size: 64px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.login-prompt h2 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+}
+
+.login-prompt p {
+    margin: 0 0 8px 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-hint {
+    margin-top: 20px !important;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+    border-radius: 12px;
+    font-weight: 600;
+    color: #fff !important;
+}

@@ -145,6 +145,26 @@ const DrawArea = ({ lotteryId }) => {
         );
     }
 
+    // ログインしていない場合はログインを促す
+    if (!user) {
+        return (
+            <div className="draw-area-login-required">
+                <div className="lottery-header">
+                    <h1 className="lottery-title">{lottery.title}</h1>
+                    <div className="creator-info">
+                        作成者: {lottery.creatorName}
+                    </div>
+                </div>
+                <div className="login-prompt">
+                    <span className="login-icon">🔐</span>
+                    <h2>くじを引くにはログインが必要です</h2>
+                    <p>Googleアカウントでログインしてください</p>
+                    <p className="login-hint">右上の「ログイン」ボタンをクリック！</p>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="draw-area">
             <div className="lottery-header">
